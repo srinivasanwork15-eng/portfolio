@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="avatar-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#4f46e5" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Glow Circle -->
+  <rect width="400" height="400" rx="200" fill="url(#bg-grad)" />
+  
+  <!-- Background Pattern Rings -->
+  <circle cx="200" cy="200" r="185" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+  <circle cx="200" cy="200" r="165" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="8 6" />
+
+  <!-- Developer Silhouette / Illustration -->
+  <g filter="url(#shadow)">
+    <!-- Body / Shoulders -->
+    <path d="M110 350 C110 270 150 240 200 240 C250 240 290 270 290 350 Z" fill="#ffffff" opacity="0.95" />
+    <!-- Collar / Shirt Detail -->
+    <path d="M175 242 L200 275 L225 242 Z" fill="#6366f1" />
+    
+    <!-- Neck -->
+    <rect x="182" y="195" width="36" height="40" rx="8" fill="#fde68a" />
+    
+    <!-- Head -->
+    <circle cx="200" cy="160" r="55" fill="#fde68a" />
+    
+    <!-- Hair -->
+    <path d="M142 150 C145 100 180 95 210 95 C245 95 258 115 258 140 C250 135 240 135 230 138 C220 130 190 128 175 138 C160 130 148 140 142 150 Z" fill="#1e293b" />
+    
+    <!-- Modern Glasses -->
+    <rect x="165" y="145" width="28" height="20" rx="6" fill="none" stroke="#1e293b" stroke-width="4" />
+    <rect x="207" y="145" width="28" height="20" rx="6" fill="none" stroke="#1e293b" stroke-width="4" />
+    <line x1="193" y1="155" x2="207" y2="155" stroke="#1e293b" stroke-width="4" />
+    <line x1="150" y1="152" x2="165" y2="154" stroke="#1e293b" stroke-width="3" />
+    <line x1="235" y1="154" x2="250" y2="152" stroke="#1e293b" stroke-width="3" />
+    
+    <!-- Cheerful Smile -->
+    <path d="M188 185 Q200 196 212 185" fill="none" stroke="#b45309" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- Code Badge Floating -->
+    <rect x="260" y="80" width="85" height="34" rx="17" fill="#0f172a" />
+    <text x="302" y="102" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">&lt;coder/&gt;</text>
+  </g>
+</svg>
+

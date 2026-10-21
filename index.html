@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of a passionate Frontend Developer showcasing web development skills, responsive projects, education, and contact information." />
+  <meta name="keywords" content="Frontend Developer, Web Developer, Portfolio, HTML, CSS, JavaScript, Projects" />
+  <meta name="author" content="Alex Morgan" />
+  <title>Alex Morgan | Frontend Developer Portfolio</title>
+  
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =========================================================
+       NAVIGATION BAR
+       - Includes brand logo, desktop menu, theme toggle, and mobile hamburger
+       ========================================================= -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main Navigation">
+      <!-- Brand Logo -->
+      <a href="#home" class="nav-logo" aria-label="Alex Morgan - Home">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">Alex</span><span class="logo-accent">.dev</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#education" class="nav-link">Education</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Action Buttons: Theme Toggle & Mobile Hamburger -->
+      <div class="nav-actions">
+        <!-- Light / Dark Mode Toggle Button -->
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle between dark and light theme" title="Toggle theme">
+          <span class="theme-icon light-icon" aria-hidden="true">☀️</span>
+          <span class="theme-icon dark-icon" aria-hidden="true">🌙</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- =========================================================
+         1. HOME / HERO SECTION
+         - Professional headline, intro, CTA buttons, and profile image
+         ========================================================= -->
+    <section class="section hero" id="home">
+      <div class="container hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span> Available for new opportunities
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Alex Morgan</span>
+          </h1>
+          <p class="hero-subtitle">Frontend Developer &amp; UI Builder</p>
+          <p class="hero-description">
+            I craft modern, accessible, and responsive websites using pure HTML, modern CSS, and vanilla JavaScript. Passionate about clean code, smooth animations, and delightful user experiences.
+          </p>
+
+          <!-- Call-To-Action (CTA) Buttons -->
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Projects</span>
+              <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+            </a>
+            <a href="#about" class="btn btn-outline" title="Learn more about my background">
+              <span>About Me</span>
+            </a>
+          </div>
+
+          <!-- Quick Social Links -->
+          <div class="hero-socials">
+            <span class="socials-label">Connect:</span>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile (Placeholder)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile (Placeholder)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="mailto:alex.developer@example.com" class="social-link" aria-label="Email Me (Placeholder)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Profile Visual -->
+        <div class="hero-image-wrapper">
+          <div class="hero-image-card">
+            <!-- Glow background circle -->
+            <div class="image-glow"></div>
+            <!-- Profile Image (SVG placeholder with JPG fallback) -->
+            <img 
+              src="images/profile-placeholder.svg" 
+              onerror="this.onerror=null; this.src='images/profile-placeholder.jpg';"
+              alt="Portrait of Alex Morgan, Frontend Developer" 
+              class="profile-img" 
+              width="360" 
+              height="360"
+            />
+            <!-- Decorative Floating Tag -->
+            <div class="floating-badge badge-top">
+              <span class="badge-icon">⚡</span>
+              <span class="badge-text">Frontend Focused</span>
+            </div>
+            <div class="floating-badge badge-bottom">
+              <span class="badge-icon">🚀</span>
+              <span class="badge-text">Clean &amp; Modern Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. ABOUT ME SECTION
+         - Short biography, interests, and career goals
+         ========================================================= -->
+    <section class="section about" id="about">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-tag">Get to know me</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            A glimpse into my background, passions, and my journey in web development.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Bio Narrative -->
+          <div class="about-bio-card">
+            <h3 class="about-heading">Crafting Web Experiences with Care</h3>
+            <p class="about-text">
+              Hello! My name is <strong>Alex</strong>, and I am an enthusiastic frontend developer based in California. My passion for web development began when I created my first interactive web page and saw how code instantly transforms into visual, interactive reality.
+            </p>
+            <p class="about-text">
+              I specialize in writing clean, well-structured <strong>HTML5</strong>, responsive and modern <strong>CSS3</strong> layouts (Flexbox &amp; CSS Grid), and interactive <strong>Vanilla JavaScript</strong>. I value simplicity, accessibility, performance, and user-centric design.
+            </p>
+            <p class="about-text">
+              When I'm not writing code, you can find me exploring modern UI/UX design trends, contributing to open-source learning communities, reading technology articles, or experimenting with new browser APIs.
+            </p>
+
+            <!-- Career Goal Banner -->
+            <div class="goal-box">
+              <div class="goal-icon" aria-hidden="true">🎯</div>
+              <div>
+                <h4 class="goal-title">My Career Goal</h4>
+                <p class="goal-desc">
+                  To join an innovative engineering team as a Junior Frontend Developer where I can build impactful user interfaces, collaborate with skilled developers, and continuously level up my skills.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Info Cards Grid -->
+          <div class="about-cards-wrapper">
+            <div class="info-card">
+              <div class="info-card-icon">💡</div>
+              <h4 class="info-card-title">Problem Solver</h4>
+              <p class="info-card-desc">Breaking down complex requirements into clean, manageable, and modular frontend components.</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">📱</div>
+              <h4 class="info-card-title">Responsive Design</h4>
+              <p class="info-card-desc">Ensuring websites look beautiful and operate smoothly across smartphones, tablets, laptops, and desktops.</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">♿</div>
+              <h4 class="info-card-title">Accessibility First</h4>
+              <p class="info-card-desc">Applying semantic HTML and ARIA labels so web experiences are inclusive and friendly for all users.</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">🌱</div>
+              <h4 class="info-card-title">Continuous Learner</h4>
+              <p class="info-card-desc">Always curious, actively practicing git workflows, reading web standards, and building hands-on projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. SKILLS SECTION
+         - Core skills: HTML, CSS, JavaScript, Git, and GitHub
+         ========================================================= -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-tag">My Expertise</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">
+            Core technologies and tools I utilize to build modern, performant web applications.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill 1: HTML5 -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap html-icon">
+                <span class="skill-symbol">&lt;/&gt;</span>
+              </div>
+              <div class="skill-info">
+                <h3 class="skill-name">HTML5</h3>
+                <span class="skill-level">Semantic &amp; Accessible Structure</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Strong mastery of semantic tags, forms, SEO fundamentals, and accessible DOM hierarchies.
+            </p>
+            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill html-fill" style="width: 95%;"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Proficiency</span>
+              <span class="skill-percent">95%</span>
+            </div>
+          </div>
+
+          <!-- Skill 2: CSS3 -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap css-icon">
+                <span class="skill-symbol">🎨</span>
+              </div>
+              <div class="skill-info">
+                <h3 class="skill-name">CSS3</h3>
+                <span class="skill-level">Styling &amp; Responsive Layouts</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Expert in Flexbox, CSS Grid, media queries, CSS variables, transitions, and subtle animations.
+            </p>
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill css-fill" style="width: 90%;"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Proficiency</span>
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+
+          <!-- Skill 3: JavaScript -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap js-icon">
+                <span class="skill-symbol">JS</span>
+              </div>
+              <div class="skill-info">
+                <h3 class="skill-name">JavaScript</h3>
+                <span class="skill-level">Interactivity &amp; Logic</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Vanilla JavaScript, DOM manipulation, event listeners, ES6+ features, fetch API, and form validation.
+            </p>
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill js-fill" style="width: 85%;"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Proficiency</span>
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+
+          <!-- Skill 4: Git -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap git-icon">
+                <span class="skill-symbol">🌿</span>
+              </div>
+              <div class="skill-info">
+                <h3 class="skill-name">Git</h3>
+                <span class="skill-level">Version Control System</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Proficient in command line git: staging, committing, branching, merging, and tracking code history.
+            </p>
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill git-fill" style="width: 85%;"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Proficiency</span>
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+
+          <!-- Skill 5: GitHub -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap github-icon">
+                <span class="skill-symbol">🐙</span>
+              </div>
+              <div class="skill-info">
+                <h3 class="skill-name">GitHub</h3>
+                <span class="skill-level">Collaboration &amp; Hosting</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Managing repositories, opening pull requests, handling code reviews, and hosting with GitHub Pages.
+            </p>
+            <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill github-fill" style="width: 88%;"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Proficiency</span>
+              <span class="skill-percent">88%</span>
+            </div>
+          </div>
+
+          <!-- Skill 6: Responsive Web Design & Tools -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap tools-icon">
+                <span class="skill-symbol">💻</span>
+              </div>
+              <div class="skill-info">
+                <h3 class="skill-name">Dev Tools &amp; VS Code</h3>
+                <span class="skill-level">Productivity &amp; Debugging</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Chrome DevTools inspecting, Live Server, VS Code shortcuts, code formatting, and web optimization.
+            </p>
+            <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill tools-fill" style="width: 92%;"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Proficiency</span>
+              <span class="skill-percent">92%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. PROJECTS SECTION
+         - At least 3 sample project cards with titles, descriptions,
+           tags, hover effects, and live / GitHub links
+         ========================================================= -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">My Projects</h2>
+          <p class="section-subtitle">
+            Explore some of the applications and web experiences I have built using HTML, CSS, and JavaScript.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project Card 1: E-Commerce Storefront -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img 
+                src="images/project-1.svg" 
+                alt="Screenshot preview of ShopEase E-Commerce Web Storefront" 
+                class="project-img" 
+                loading="lazy"
+                width="600" 
+                height="360"
+              />
+              <div class="project-badge">Featured Project</div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3 (Grid/Flex)</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">LocalStorage</span>
+              </div>
+              <h3 class="project-title">ShopEase - Modern E-Commerce Storefront</h3>
+              <p class="project-description">
+                A modern e-commerce product catalog with interactive category filtering, instant search, a slide-out shopping cart, and persistent checkout state using browser LocalStorage.
+              </p>
+              <div class="project-links">
+                <a href="https://example.com/project-1-demo" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="View Live Project (Placeholder URL)">
+                  <span>View Project</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="https://github.com/yourusername/shopease-storefront" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="View GitHub Repository (Placeholder URL)">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2: Weather Forecast Dashboard -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img 
+                src="images/project-2.svg" 
+                alt="Screenshot preview of SkyCast Weather Forecast Web Application" 
+                class="project-img" 
+                loading="lazy"
+                width="600" 
+                height="360"
+              />
+              <div class="project-badge">API Integration</div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS Animations</span>
+                <span class="tag">Async / Fetch</span>
+                <span class="tag">Weather API</span>
+              </div>
+              <h3 class="project-title">SkyCast - Real-Time Weather Dashboard</h3>
+              <p class="project-description">
+                An interactive weather application providing real-time forecasts, air quality indices, 5-day future projections, Celsius/Fahrenheit conversion, and dynamic weather animations.
+              </p>
+              <div class="project-links">
+                <a href="https://example.com/project-2-demo" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="View Live Project (Placeholder URL)">
+                  <span>View Project</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="https://github.com/yourusername/skycast-weather-app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="View GitHub Repository (Placeholder URL)">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3: Task & Kanban Manager -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img 
+                src="images/project-3.svg" 
+                alt="Screenshot preview of TaskFlow Kanban Board application" 
+                class="project-img" 
+                loading="lazy"
+                width="600" 
+                height="360"
+              />
+              <div class="project-badge">Productivity App</div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">HTML5 Drag &amp; Drop</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Vanilla JS</span>
+                <span class="tag">State Management</span>
+              </div>
+              <h3 class="project-title">TaskFlow - Kanban Productivity Board</h3>
+              <p class="project-description">
+                A clean, efficient kanban-style project board with column organization (To Do, In Progress, Done), customizable priority tags, drag-and-drop mechanics, and automatic storage.
+              </p>
+              <div class="project-links">
+                <a href="https://example.com/project-3-demo" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" title="View Live Project (Placeholder URL)">
+                  <span>View Project</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="https://github.com/yourusername/taskflow-kanban" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" title="View GitHub Repository (Placeholder URL)">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. EDUCATION SECTION
+         - Timeline of degree, certifications, and self-directed study
+         ========================================================= -->
+    <section class="section education" id="education">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-tag">Academic Path</span>
+          <h2 class="section-title">Education &amp; Credentials</h2>
+          <p class="section-subtitle">
+            My formal education, certifications, and ongoing commitment to mastering web development.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022 — 2026</span>
+              <h3 class="timeline-title">Bachelor of Science in Computer Science</h3>
+              <h4 class="timeline-institution">University of California / State University (Sample)</h4>
+              <p class="timeline-description">
+                Focused on software development principles, algorithms, data structures, and human-computer interaction. Maintained a 3.8 GPA and participated actively in web development hackathons.
+              </p>
+              <div class="timeline-highlights">
+                <span class="mini-tag">Data Structures</span>
+                <span class="mini-tag">Web Technologies</span>
+                <span class="mini-tag">Software Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024</span>
+              <h3 class="timeline-title">Responsive Web Design &amp; JavaScript Certification</h3>
+              <h4 class="timeline-institution">freeCodeCamp / Coursera (Sample)</h4>
+              <p class="timeline-description">
+                Completed 300+ hours of interactive coursework covering semantic HTML5 markup, responsive CSS layout techniques, accessibility standards (WCAG), and modern JavaScript programming.
+              </p>
+              <div class="timeline-highlights">
+                <span class="mini-tag">Accessibility (a11y)</span>
+                <span class="mini-tag">CSS Flex &amp; Grid</span>
+                <span class="mini-tag">ES6+ JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 — Present</span>
+              <h3 class="timeline-title">Self-Directed Frontend Specialization</h3>
+              <h4 class="timeline-institution">MDN Web Docs, Frontend Mentor &amp; Open Source</h4>
+              <p class="timeline-description">
+                Regularly building real-world projects, studying MDN official documentation, practicing clean Git commit history, and refining responsive layouts across diverse screen sizes.
+              </p>
+              <div class="timeline-highlights">
+                <span class="mini-tag">Modern Web Standards</span>
+                <span class="mini-tag">Version Control</span>
+                <span class="mini-tag">Performance Optimization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. CONTACT SECTION
+         - Form with validation, contact details, and note on backend setup
+         ========================================================= -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Whether you have an opportunity, a question, or simply want to say hello, my inbox is open!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details & Info -->
+          <div class="contact-info-panel">
+            <h3 class="contact-info-title">Let's talk about your next project</h3>
+            <p class="contact-info-desc">
+              I am currently open to freelance opportunities, junior developer roles, and open-source collaborations. Fill out the form or reach out through my social channels.
+            </p>
+
+            <div class="contact-methods">
+              <!-- Email Card -->
+              <div class="contact-method-card">
+                <div class="method-icon" aria-hidden="true">✉️</div>
+                <div>
+                  <span class="method-label">Email Me</span>
+                  <a href="mailto:alex.developer@example.com" class="method-value">alex.developer@example.com</a>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-method-card">
+                <div class="method-icon" aria-hidden="true">📍</div>
+                <div>
+                  <span class="method-label">Location</span>
+                  <span class="method-value">San Francisco, CA (Open to Remote Worldwide)</span>
+                </div>
+              </div>
+
+              <!-- Availability Card -->
+              <div class="contact-method-card">
+                <div class="method-icon" aria-hidden="true">💼</div>
+                <div>
+                  <span class="method-label">Employment Status</span>
+                  <span class="method-value">Available for Junior Frontend Roles</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links in Contact -->
+            <div class="contact-socials-box">
+              <span class="socials-title">Follow My Coding Journey:</span>
+              <div class="social-links-list">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Visit my GitHub profile (Placeholder)">
+                  <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Visit my LinkedIn profile (Placeholder)">
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Visit my Twitter/X profile (Placeholder)">
+                  <span>Twitter/X</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-panel">
+            <form id="contact-form" class="contact-form" novalidate>
+              <!-- Alert feedback box for success/error feedback -->
+              <div id="form-alert" class="form-alert" role="alert" aria-live="polite" style="display: none;"></div>
+
+              <!-- Full Name Field -->
+              <div class="form-group">
+                <label for="user-name" class="form-label">
+                  Your Full Name <span class="required-asterisk">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input 
+                    type="text" 
+                    id="user-name" 
+                    name="userName" 
+                    class="form-input" 
+                    placeholder="e.g. Jane Doe" 
+                    required 
+                    autocomplete="name"
+                  />
+                </div>
+                <span class="error-text" id="name-error"></span>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="user-email" class="form-label">
+                  Your Email Address <span class="required-asterisk">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input 
+                    type="email" 
+                    id="user-email" 
+                    name="userEmail" 
+                    class="form-input" 
+                    placeholder="e.g. jane@example.com" 
+                    required 
+                    autocomplete="email"
+                  />
+                </div>
+                <span class="error-text" id="email-error"></span>
+              </div>
+
+              <!-- Subject Field -->
+              <div class="form-group">
+                <label for="user-subject" class="form-label">
+                  Subject <span class="required-asterisk">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input 
+                    type="text" 
+                    id="user-subject" 
+                    name="userSubject" 
+                    class="form-input" 
+                    placeholder="e.g. Collaboration Opportunity or Project Inquiry" 
+                    required
+                  />
+                </div>
+                <span class="error-text" id="subject-error"></span>
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group">
+                <label for="user-message" class="form-label">
+                  Your Message <span class="required-asterisk">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <textarea 
+                    id="user-message" 
+                    name="userMessage" 
+                    class="form-input form-textarea" 
+                    rows="5" 
+                    placeholder="Write your message here... I would love to hear from you!" 
+                    required
+                  ></textarea>
+                </div>
+                <span class="error-text" id="message-error"></span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <!-- Helpful Beginner Note on Static Email Form Limitations -->
+              <p class="form-note">
+                ℹ️ <strong>Developer Note:</strong> This form validates your input in the browser using JavaScript. Because this is a purely frontend website without a backend server, clicking submit tests the validation without sending an actual email. (The README explains how to connect free services like Formspree in under 2 minutes).
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       7. FOOTER
+       - Dynamic copyright year, navigation links, and back-to-top
+       ========================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <span class="logo-bracket">&lt;</span><span class="logo-name">Alex</span><span class="logo-accent">.dev</span><span class="logo-bracket">/&gt;</span>
+          </a>
+          <p class="footer-tagline">
+            Building accessible, responsive, and elegant frontend experiences one pixel at a time.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Quick Links">
+          <h4 class="footer-nav-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-socials">
+          <h4 class="footer-nav-title">Social Profiles</h4>
+          <div class="footer-social-icons">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="mailto:alex.developer@example.com" class="social-icon-btn" aria-label="Email Me">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> <strong>Alex Morgan</strong>. Built with pure HTML, CSS, and JavaScript.
+        </p>
+        <button type="button" class="footer-top-btn" id="footer-top-btn" aria-label="Scroll back to top">
+          Back to Top &uarr;
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       FLOATING BACK-TO-TOP BUTTON
+       - Appears when user scrolls down
+       ========================================================= -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top of page" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
