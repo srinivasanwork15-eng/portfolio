@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌟 Modern Personal Portfolio Website
 
 Welcome to your personal portfolio website! This project is crafted using pure **HTML5**, modern **CSS3**, and vanilla **JavaScript** — with **no external frameworks**, no build tools, and no paid services required.
@@ -198,3 +199,6 @@ Before publishing your portfolio to GitHub Pages or Netlify, test this checklist
 
 🎉 **Congratulations!** You now have a complete, responsive, modern portfolio website ready to showcase your work to the world!
 
+=======
+# portfolio
+>>>>>>> 22086ddd0dda469669e866a6d5a8933edcfde1e6
